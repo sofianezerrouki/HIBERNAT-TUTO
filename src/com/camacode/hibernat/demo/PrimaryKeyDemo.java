@@ -42,7 +42,6 @@ public class PrimaryKeyDemo {
 			session.getTransaction().commit();
 			System.out.println("Done !");
 
-
 		} 
 		finally {
 			factory.close();
