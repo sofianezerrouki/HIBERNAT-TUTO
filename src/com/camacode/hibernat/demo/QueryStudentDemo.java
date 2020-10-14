@@ -34,13 +34,16 @@ public class QueryStudentDemo {
 			List<Student> mstudents = session.createQuery("from Student s where s.lastName='younes'")
 					.getResultList();
 			
+			//query students : lastName = "younes"
+			List<Student> ystudents = session.createQuery("from Student s where s.email LIKE '%@gmail.com'")
+					.getResultList();
+			
 			//display the students
-			displayStudents(mstudents);
+			displayStudents(ystudents);
 			
 			//commit transaction
 			session.getTransaction().commit();
 			System.out.println("Done !");
-
 
 		} 
 		finally {
@@ -50,9 +53,6 @@ public class QueryStudentDemo {
 
 	}
 
-	/**
-	 * @param mstudents
-	 */
 	private static void displayStudents(List<Student> mstudents) {
 		for (Student student : mstudents) {
 			System.out.println(student);
