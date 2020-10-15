@@ -23,7 +23,7 @@ public class UpdateStudentDemo {
 			
 			int studentId = 1; 
 			//Update a student object
-			session = factory.getCurrentSession();
+			
 			session.beginTransaction();
 			
 			//save the student object  
@@ -32,7 +32,7 @@ public class UpdateStudentDemo {
 			
 			System.out.println(myStudent);
 			System.out.println("\nUpdating Student .. ");
-			myStudent.setFirstName("Mohamed");
+			myStudent.setFirstName("H");
 			
 			myStudent = session.get(Student.class,studentId);
 			System.out.println(myStudent);
