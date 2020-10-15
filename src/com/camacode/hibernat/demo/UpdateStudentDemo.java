@@ -20,20 +20,34 @@ public class UpdateStudentDemo {
 		Session session = factory.getCurrentSession();
 		
 		try {
+			
 			int studentId = 1; 
+			//Update a student object
 			
 			session.beginTransaction();
 			
-			//retrieve student from data base  
+			//save the student object  
 			System.out.println("\nGetting a student object .... ");
 			Student myStudent = session.get(Student.class,studentId);
 			
-			//Delete the Student 
-			System.out.println("\nDeleting Student .. "+myStudent);
-			session.delete(myStudent);
-
+			System.out.println(myStudent);
+			System.out.println("\nUpdating Student .. ");
+			myStudent.setFirstName("H");
+			
+			myStudent = session.get(Student.class,studentId);
+			System.out.println(myStudent);
 			//commit transaction
 			session.getTransaction().commit();
+			//new code
+			Session s = factory.getCurrentSession();
+			s.beginTransaction();
+			//update email for all student 
+			s.createQuery("update Student set email='foo@gmail.com'")
+				.executeUpdate();
+			
+			//commit the transaction
+			s.getTransaction().commit();
+			 
 			System.out.println("Done !");
 
 		} 
