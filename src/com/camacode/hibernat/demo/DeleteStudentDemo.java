@@ -6,7 +6,7 @@ import org.hibernate.cfg.Configuration;
 
 import com.camacode.hibernat.demo.entity.Student;
 
-public class UpdateStudentDemo {
+public class DeleteStudentDemo {
 
 	public static void main(String[] args) {
 		
@@ -20,6 +20,7 @@ public class UpdateStudentDemo {
 		Session session = factory.getCurrentSession();
 		
 		try {
+			
 			int studentId = 1; 
 			
 			session.beginTransaction();
