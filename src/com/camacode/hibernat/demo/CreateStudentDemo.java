@@ -24,7 +24,7 @@ public class CreateStudentDemo {
 			System.out.println("Create a student object .... ");
 			Student tempStudent = new Student("zerrouki", "sofiane", "sofiane@gmail.com");
 	
-			//create a student object
+			//Begin transaction 
 			System.out.println("Begin transaction .... ");
 			session.beginTransaction();
 			
@@ -41,7 +41,6 @@ public class CreateStudentDemo {
 		finally {
 			factory.close();
 		}
-		
 
 	}
 

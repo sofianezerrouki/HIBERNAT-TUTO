@@ -8,7 +8,7 @@ public class TestJdbc {
 	public static void main(String[] args) {
 		
 		
-		String jdbcUrl = "jdbc:mysql://localhost/hb_student_tracker";
+		String jdbcUrl = "jdbc:mysql://localhost/hb-01-one-to-one-uni";
 		String user = "sofiane";
 		String pass = "sofiane";
 		try {
