@@ -1,0 +1,33 @@
+<body >
+     <div class="row">
+        <h1 class="mt-3 mb-3" style="margin-left:100px ;">List of doctors</h1>
+                <div class="column" *ngFor="let tempDoctor of doctors">
+                        <div class="card"  >
+                                <img src="{{tempDoctor.detail.imgUrl}}" style="padding-top: 10px;">
+                                
+                        
+                                <p class="title">{{tempDoctor.firstName}} {{tempDoctor.lastName}}</p> 
+                                
+                                <br>Email :  {{tempDoctor.email}}
+                                <button >Show More Details</button>               
+        
+                                <a href="#">
+                                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                                </a>
+                                <a href="#">
+                                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                                </a>
+                                <a href="#">
+                                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                                </a>
+                                <a href="#">
+                                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                                </a>
+        
+            
+                        </div>            
+                </div>
+        </div>
+</body>
+
+

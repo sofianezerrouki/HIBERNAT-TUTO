@@ -1,0 +1,21 @@
+
+
+  <header>
+
+  
+  <nav >
+      <ul class="nav__links">
+        <a class="item" [routerLink]="['/home']">LOGO :)<img class="logo" alt="logo" src="images/logo.svg"></a>
+        <li><a class="item" [routerLink]="['/pdfs']">Pdfs</a></li>
+        <li><a class="item" [routerLink]="['/about']">About</a></li>
+        <li><input class="search"type="text" placeholder="Search for pdf"></li>
+        <li><a class="item" [routerLink]="['/login']"><button> Login</button></a></li>
+        <li><a class="item" [routerLink]="['/signup']"><button>Sign Up</button> </a></li>
+      </ul>
+  </nav>  
+ 
+</header>
+
+
+  <router-outlet></router-outlet>
+  

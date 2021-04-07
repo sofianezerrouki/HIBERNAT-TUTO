@@ -1,0 +1,6 @@
+<h1>this is a simple and the first request with the ng-book</h1>
+
+<button type="button" (click)="makeRequest()" class="">Send Simple Request</button>
+
+<p *ngIf='loading'>Loading ...</p>
+<pre>{{data | json}}</pre>

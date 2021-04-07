@@ -1,0 +1,24 @@
+<div  style=" background-color: #EFEFEF;">    
+    <div class="ui borderless main menu" >
+      <div class="ui container">
+        <a class="item">Zerrouki Sofiane</a>
+        <a [routerLink]="['/home']" class="teal item">Home</a>
+        <a [routerLink]="['/about']" class="item">About Us</a>
+        <a [routerLink]="['/contact']" class="item">Contact Us</a>
+        
+        <div class="right menu"> 
+        
+          <a [routerLink]="['/logIn']" class="item">Log in</a>
+          <pre>  </pre>
+          <a [routerLink]="['/login']" class="item">Sign up</a>
+          
+        </div>
+      </div>
+    </div> 
+
+
+
+  <div class="ui container" >
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,122 @@
+<p>sign-up works!</p>
+<form
+    [formGroup]="myForm"
+    class="card"
+    (ngSubmit)="signUpUser(myForm.value)"
+    [class.error]="!myForm.valid && myForm.touched"
+    >
+    <div class="mb-3" [class.error]="!userName.valid && userName.touched">
+        <label class="form-label">User Name</label>
+        <input class="form-control" placeholder="User Name" [formControl]="userName" >
+
+    </div>
+    <div class="mb-3" >
+      <div *ngIf="!userName.valid && userName.touched" class="alert alert-danger">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        Please fill out this field.
+      </div>
+    </div>  
+    <br>
+    <div class="mb-3" [class.error]="!emailId.valid && emailId.touched">
+        <label class="form-label">Email Adrress</label>
+        <input class="form-control"  placeholder="Email Address" [formControl]="emailId">
+    </div>
+    <div class="mb-3" >
+      <div *ngIf="!emailId.valid && emailId.touched" class="alert alert-danger">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        Email not valid
+      </div>
+    </div>
+    <br>
+    <div class="mb-3" >
+        <label class="form-label">Password</label>
+        <input class="form-control"  placeholder="Password" [formControl]="password">
+    </div>
+    <div class="mb-3" >
+      <div *ngIf="!password.valid && password.touched" class="alert alert-danger">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        Password must 4 character min.
+      </div>
+    </div>
+    
+    <div class="mb-3">
+        <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" > 
+              I read and Accept the (SiteName) <a>terms & condition</a>  
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" > 
+              I read and Accept <a >privacity policier </a> 
+            </label>
+          </div>
+    </div>
+    <div  class="mb-3" >
+      <div   *ngIf="!bool" class="alert alert-danger">
+        
+        {{msg}}
+      </div>
+    </div>
+    <div class="mb-3" style="margin-right: auto;">
+        <button class="btn btn-primary"  type="submit" >Submit</button>
+    </div>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <form
+    class="card"
+    (ngSubmit)="signUpUser()">
+    <div class="mb-3">
+        <label class="form-label">User Name</label>
+        <input class="form-control" [(ngModel)]="user.userName" name="userName" placeholder="User Name">
+    </div>
+    <br>
+    <div class="mb-3">
+        <label class="form-label">Email Adrress</label>
+        <input class="form-control"  [(ngModel)]="user.emailId" name="emailId" placeholder="Email Address">
+    </div>
+    <br>
+    <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input class="form-control"  [(ngModel)]="user.password" name="password" placeholder="Password">
+    </div>
+    <br>
+    <div class="mb-3">
+        <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox"> 
+              I read and Accept the (SiteName) <a>terms & condition</a>  
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox"> 
+              I read and Accept <a >privacity policier </a> 
+            </label>
+          </div>
+    </div>
+    <br>
+    <div class="mb-3" style="margin-right: auto;">
+        <button class="btn btn-primary"  type="submit" >Submit</button>
+    </div>
+</form> -->

@@ -1,0 +1,23 @@
+.say{
+   
+    background-color: #ff9A3A;
+}
+.search{
+    color: white;
+    background-color: #ff9A3A;
+    margin-left: 2%;
+}
+.search:hover{
+    color: white;
+    background-color: #ff9A3A;
+    margin-left: 2%;
+}
+a{
+    color: #333;
+}
+a:hover{
+    color:#ff9A3A ;
+}
+.contact{
+    float: right;
+}
